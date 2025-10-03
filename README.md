@@ -18,12 +18,12 @@ Each stage uses AI models to infer and correct errors from previous stages, resu
 
 ## Features
 
-- 🎤 **Multi-Input Support**: Record audio directly or upload existing files (MP3, WAV, OGG, M4A, FLAC)
-- 🔄 **Three-Stage Pipeline**: Transcription → Optimization → Execution
-- 🧠 **Error Correction**: Contextual inference fixes transcription mishearings automatically
-- 📝 **Full Transparency**: Access raw transcripts, optimized prompts, and final results
-- 💾 **Persistent Storage**: All intermediate and final outputs saved with timestamps
-- 🎨 **Dual Interface**: CLI for automation, GUI for interactive use
+- **Multi-Input Support**: Record audio directly or upload existing files (MP3, WAV, OGG, M4A, FLAC)
+- **Three-Stage Pipeline**: Transcription → Optimization → Execution
+- **Error Correction**: Contextual inference fixes transcription mishearings automatically
+- **Full Transparency**: Access raw transcripts, optimized prompts, and final results
+- **Persistent Storage**: All intermediate and final outputs saved with timestamps
+- **Dual Interface**: CLI for automation, GUI for interactive use
 
 ## Architecture
 
@@ -45,12 +45,14 @@ Audio File
     ↓
 [Stage 1: Transcription]
     • Model: Gemini 2.5 Flash Lite
+    • System Prompt: prompts/system_prompts/stage1_transcription_cleanup.txt
     • Removes filler words (um, uh, like)
     • Adds sentence spacing
     • Output: Clean text transcript
     ↓
 [Stage 2: Optimization]
     • Model: Gemini 2.5 Flash Lite
+    • System Prompt: prompts/system_prompts/stage2_prompt_optimization.txt
     • Adds structure and headers
     • Fixes transcription errors through context
     • Organizes into logical sections
@@ -102,6 +104,9 @@ Voice-Prompt-Runner/
 │   └── requirements.txt   # GUI dependencies
 ├── prompts/               # Shared storage
 │   ├── audio/            # Input audio files
+│   ├── system_prompts/   # Stage prompts
+│   │   ├── stage1_transcription_cleanup.txt
+│   │   └── stage2_prompt_optimization.txt
 │   └── transcript/
 │       ├── formatted/    # Stage 1 outputs
 │       └── polished/     # Stage 2 outputs

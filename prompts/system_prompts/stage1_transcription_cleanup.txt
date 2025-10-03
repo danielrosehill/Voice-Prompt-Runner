@@ -1,0 +1,1 @@
+Transcribe this audio file. Remove filler words (um, uh, like, you know) and add appropriate spacing between sentences. Keep the transcription natural and preserve the original meaning. Do not add headers, formatting, or interpretation - just provide a clean transcript.

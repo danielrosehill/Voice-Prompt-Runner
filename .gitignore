@@ -1,0 +1,15 @@
+venv/
+.venv/
+gui/.venv/
+.env
+__pycache__/
+*.pyc
+.DS_Store
+outputs/*
+!outputs/.gitkeep
+prompts/audio/*
+!prompts/audio/.gitkeep
+prompts/transcript/formatted/*
+!prompts/transcript/formatted/.gitkeep
+prompts/transcript/polished/*
+!prompts/transcript/polished/.gitkeep

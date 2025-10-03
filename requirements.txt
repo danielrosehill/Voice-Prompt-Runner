@@ -1,0 +1,3 @@
+# Root requirements (install from cli/ or gui/ subdirectories instead)
+# See cli/requirements.txt for CLI version
+# See gui/requirements.txt for GUI version

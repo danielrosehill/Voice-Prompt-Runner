@@ -124,7 +124,18 @@ GEMINI_API_KEY=your_api_key_here
 
 **GUI**: Enter API key in sidebar (secure input field)
 
-Get your API key at: https://makersuite.google.com/app/apikey
+Get your API key at: https://aistudio.google.com/apikey (formerly Google AI Studio/Makersuite)
+
+## Demo/Example
+
+This repository includes a complete example demonstrating the three-stage voice prompting pipeline:
+
+- **Audio Input**: [`prompts/audio/demo.mp3`](prompts/audio/demo.mp3) - Original voice recording
+- **Stage 1 Output**: [`prompts/transcript/formatted/raw_demo_20251003_140333.txt`](prompts/transcript/formatted/raw_demo_20251003_140333.txt) - Clean transcript
+- **Stage 2 Output**: [`prompts/transcript/polished/optimized_demo_20251003_140333.md`](prompts/transcript/polished/optimized_demo_20251003_140333.md) - Optimized prompt
+- **Stage 3 Output**: [`outputs/demo_20251003_140333_output.md`](outputs/demo_20251003_140333_output.md) - Final AI result
+
+You can also see [`DEMO.md`](DEMO.md) for a comprehensive walkthrough.
 
 ## Use Cases
 
